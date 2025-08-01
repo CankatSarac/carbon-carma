@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Karma</title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="logo">
+        <span class="logo-icon">🌱</span>
+        <h1>Carbon Karma</h1>
+      </div>
+      <div class="current-badge" id="current-badge">
+        <span class="badge-count" id="badge-count">0</span>
+        <span class="badge-label">Leaf Badges</span>
+      </div>
+    </header>
+
+    <nav class="popup-nav">
+      <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="nav-btn" data-tab="badges">Badges</button>
+      <button class="nav-btn" data-tab="settings">Settings</button>
+    </nav>
+
+    <main class="popup-content">
+      <!-- Dashboard Tab -->
+      <div class="tab-content active" id="dashboard-tab">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-info">
+              <div class="stat-value" id="total-carbon">0g</div>
+              <div class="stat-label">Total CO₂</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-info">
+              <div class="stat-value" id="total-time">0h</div>
+              <div class="stat-label">Total Time</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">🌍</div>
+            <div class="stat-info">
+              <div class="stat-value" id="sites-visited">0</div>
+              <div class="stat-label">Sites Visited</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">💚</div>
+            <div class="stat-info">
+              <div class="stat-value" id="carbon-saved">0g</div>
+              <div class="stat-label">Carbon Saved</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <h3>Today's Progress</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" id="daily-progress"></div>
+          </div>
+          <div class="progress-text">
+            <span id="green-sessions">0</span> green sessions today
+          </div>
+        </div>
+
+        <div class="recent-activity">
+          <h3>Recent Activity</h3>
+          <div class="activity-list" id="activity-list">
+            <div class="activity-item">
+              <span class="activity-icon">🌱</span>
+              <span class="activity-text">Welcome to Carbon Karma!</span>
+              <span class="activity-time">Just now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges Tab -->
+      <div class="tab-content" id="badges-tab">
+        <div class="badge-showcase">
+          <div class="current-badges">
+            <h3>Current Badges</h3>
+            <div class="badge-display" id="badge-display">
+              <div class="badge-item">
+                <span class="badge-emoji">🌱</span>
+                <span class="badge-name">Leaf Badge</span>
+                <span class="badge-value" id="leaf-badge-count">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="achievements">
+            <h3>Achievements</h3>
+            <div class="achievement-list" id="achievement-list">
+              <div class="achievement-item locked" data-achievement="first-green">
+                <span class="achievement-icon">🌿</span>
+                <div class="achievement-info">
+                  <div class="achievement-name">First Green Session</div>
+                  <div class="achievement-desc">Complete your first low-carbon browsing session</div>
+                </div>
+              </div>
+              
+              <div class="achievement-item locked" data-achievement="carbon-saver">
+                <span class="achievement-icon">💚</span>
+                <div class="achievement-info">
+                  <div class="achievement-name">Carbon Saver</div>
+                  <div class="achievement-desc">Save 100g of CO₂ through green browsing</div>
+                </div>
+              </div>
+              
+              <div class="achievement-item locked" data-achievement="eco-warrior">
+                <span class="achievement-icon">🏆</span>
+                <div class="achievement-info">
+                  <div class="achievement-name">Eco Warrior</div>
+                  <div class="achievement-desc">Maintain 50 leaf badges</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Tab -->
+      <div class="tab-content" id="settings-tab">
+        <div class="settings-section">
+          <h3>Tracking Settings</h3>
+          
+          <div class="setting-item">
+            <label class="setting-label">
+              <input type="checkbox" id="tracking-enabled" checked>
+              <span class="checkmark"></span>
+              Enable carbon tracking
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <label class="setting-label">
+              <input type="checkbox" id="show-counter" checked>
+              <span class="checkmark"></span>
+              Show carbon counter on pages
+            </label>
+          </div>
+          
+          <div class="setting-item">
+            <label for="carbon-threshold">Carbon threshold (grams CO₂)</label>
+            <input type="range" id="carbon-threshold" min="1" max="20" value="5" step="0.5">
+            <span class="threshold-value" id="threshold-value">5.0g</span>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>Data & Privacy</h3>
+          
+          <div class="setting-item">
+            <button class="action-btn" id="export-data">Export My Data</button>
+          </div>
+          
+          <div class="setting-item">
+            <button class="action-btn danger" id="reset-data">Reset All Data</button>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3>About</h3>
+          <div class="about-info">
+            <p><strong>Carbon Karma v1.0.0</strong></p>
+            <p>Track your website carbon footprint and earn badges for eco-friendly browsing.</p>
+            <div class="about-links">
+              <a href="#" id="privacy-policy">Privacy Policy</a>
+              <a href="#" id="feedback">Send Feedback</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>

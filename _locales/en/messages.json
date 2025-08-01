@@ -1,0 +1,32 @@
+{
+  "extensionName": {
+    "message": "Carbon Karma"
+  },
+  "extensionDescription": {
+    "message": "Track your website carbon footprint with live CO₂ counters and earn green badges for low-carbon browsing"
+  },
+  "carbonEmitted": {
+    "message": "CO₂ emitted"
+  },
+  "timeOnPage": {
+    "message": "Time on page"
+  },
+  "energyUsed": {
+    "message": "Energy used"
+  },
+  "greenBadge": {
+    "message": "🌱 Green Session!"
+  },
+  "redBadge": {
+    "message": "⚠️ High Carbon Usage"
+  },
+  "findAlternatives": {
+    "message": "Find green alternatives"
+  },
+  "badgeEarned": {
+    "message": "Badge earned!"
+  },
+  "badgeLost": {
+    "message": "Badge lost"
+  }
+}

@@ -1,0 +1,50 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leafGradient128" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7fb069;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4a7c59;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#4a7c59;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a27;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="centerGlow128" cx="50%" cy="30%" r="35%">
+      <stop offset="0%" style="stop-color:#7fb069;stop-opacity:0.4" />
+      <stop offset="70%" style="stop-color:#7fb069;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#7fb069;stop-opacity:0" />
+    </radialGradient>
+    <filter id="dropShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#2d5a27" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="#f8f9fa" stroke="#e9ecef" stroke-width="2"/>
+  
+  <!-- Main leaf shape with shadow -->
+  <path d="M64 20C44 20 28 36 28 56c0 16 8 28 18 36c6 5 12 8 18 8s12-3 18-8c10-8 18-20 18-36c0-20-16-36-36-36z" 
+        fill="url(#leafGradient128)" filter="url(#dropShadow)"/>
+  
+  <!-- Center highlight glow -->
+  <path d="M64 20C44 20 28 36 28 56c0 16 8 28 18 36c6 5 12 8 18 8s12-3 18-8c10-8 18-20 18-36c0-20-16-36-36-36z" 
+        fill="url(#centerGlow128)"/>
+  
+  <!-- Main central vein -->
+  <path d="M64 24v72" stroke="#2d5a27" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Primary side veins -->
+  <path d="M64 35L50 49M64 45L78 59M64 55L50 69M64 65L78 79M64 75L50 89M64 85L78 99" 
+        stroke="#2d5a27" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Secondary veins -->
+  <path d="M57 42L52 47M71 52L76 57M57 62L52 67M71 72L76 77M57 82L52 87M71 92L76 97" 
+        stroke="#4a7c59" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Tertiary detail veins -->
+  <path d="M60 38L58 40M68 48L70 50M60 58L58 60M68 68L70 70M60 78L58 80M68 88L70 90" 
+        stroke="#4a7c59" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Small carbon atoms representation (optional detail) -->
+  <circle cx="45" cy="40" r="1.5" fill="#2d5a27" opacity="0.6"/>
+  <circle cx="83" cy="48" r="1.5" fill="#2d5a27" opacity="0.6"/>
+  <circle cx="48" cy="75" r="1.5" fill="#2d5a27" opacity="0.6"/>
+  <circle cx="80" cy="83" r="1.5" fill="#2d5a27" opacity="0.6"/>
+</svg>

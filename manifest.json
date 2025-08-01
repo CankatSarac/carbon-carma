@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Carbon Karma",
+  "version": "1.0.0",
+  "description": "Track your website carbon footprint with live CO₂ counters and earn green badges for low-carbon browsing",
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "https://api.websitecarbon.org/*",
+    "https://www.carboninterface.com/*"
+  ],
+  
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content_script.js"],
+      "css": ["css/carbon-counter.css"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Carbon Karma",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png", 
+    "128": "icons/icon128.png"
+  },
+  
+  "default_locale": "en"
+}
