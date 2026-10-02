@@ -1,0 +1,9 @@
+
+# Release files and local credentials
+node_modules/
+dist/
+artifacts/
+.env
+.env.*
+*.credentials.json
+.amo-upload-uuid
