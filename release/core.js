@@ -1,0 +1,1 @@
+(function(root){function estimate(bytes,kwhPerGB,gramsPerKwh){if(![bytes,kwhPerGB,gramsPerKwh].every(v=>Number.isFinite(v)&&v>=0))throw Error('Use non-negative numeric values.');return bytes/1e9*kwhPerGB*gramsPerKwh;}root.CarbonCore={estimate};if(typeof module!=='undefined')module.exports=root.CarbonCore;})(globalThis);
